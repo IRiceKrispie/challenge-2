@@ -25,6 +25,7 @@ a{
     background-color: rgb(176, 176, 221);
     z-index: 1;
     height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .grid-item{
@@ -87,7 +88,7 @@ a{
     display: grid;
     gap: 0px;
     grid-template-columns: auto; /* 1 column*/
-    grid-template-rows: 100vh auto; /* 2 rows*/
+    grid-template-rows: 100vh auto auto; /* 3 rows*/
 
 }
 
@@ -103,9 +104,15 @@ a{
 .main-item-2{
     grid-row: 2;
     display: flex;
+    justify-content: center;
 }
 
-#portfolio{
+.main-item-3{
+    grid-row: 3;
+}
+
+#portfolio-header{
+    
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 

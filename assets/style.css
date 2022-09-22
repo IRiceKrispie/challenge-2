@@ -19,11 +19,11 @@ a{
 .aside-grid{
     grid-column: 1;
     width: 250px;
-    position: fixed;
     display: grid;
+    position: fixed;
     grid-template-rows: 200px 100px auto;
     background-color: rgb(176, 176, 221);
-    z-index: 1;
+    z-index: 0;
     height: 100vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -89,12 +89,12 @@ a{
     display: grid;
     gap: 0px;
     grid-template-columns: auto; /* 1 column*/
-    grid-template-rows: 100vh auto auto; /* 3 rows*/
+    grid-template-rows: /*100vh*/ auto auto auto; /* 3 rows*/
 
 }
 
 .main-item-1{
-    grid-row: 1;
+    grid-row: 1 / 1;
 }
 
 .main-item-1 img{
@@ -113,7 +113,29 @@ a{
 }
 
 #portfolio-header{
-    
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
+@media screen and (max-width: 600px) {
+    .start-grid{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .aside-grid{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        float: left;
+        height: auto;
+        position: static;
+    }
+    .main-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+}

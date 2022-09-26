@@ -1,8 +1,8 @@
 :root {
-    --font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    --font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif /* Set up font variable for other rule sets */
 }
 
-a{
+a{ 
     text-decoration: none; /* no text decorations on anchor tags*/
 }
 
@@ -12,7 +12,7 @@ a{
 
 
 
-.start-grid{
+.start-grid{ /* Begin our grid with two columns */
     display: grid;
     position: relative;
     gap: 0px;
@@ -20,7 +20,7 @@ a{
     grid-template-columns: 250px auto;
     overflow-x: hidden;
 }
-.aside-grid{
+.aside-grid{ /* This grid creates our side bard with 3 rows and stays fixed to the side as you scroll */
     grid-column: 1;
     width: 250px;
     display: grid;
@@ -32,7 +32,7 @@ a{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.grid-item{
+.grid-item{ /* gives every item in our grid the border box box-sizing. Also if we add a border we can clearly see where each row starts and ends */
     border: 0px;
     border-style: solid;
     border-color: black;
@@ -40,20 +40,20 @@ a{
     
 }
 
-.aside-item-1{
+.aside-item-1{ /* our first row in our sidebar has a font-family of Arial*/
     grid-row: 1;
     font-family: Arial, Helvetica, sans-serif;
     
 }
 
-.aside-item-2{
+.aside-item-2{ /* our second row which includes our link icons */
     grid-row: 2;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.aside-item-3{
+.aside-item-3{ /* our third row which includes our nav bar */
     grid-row: 3;
     display: flex;
     justify-content: center; /* horizontal */
@@ -61,7 +61,7 @@ a{
 }
 
 
-.profile-pic{
+.profile-pic{ /* styles our profile pic to have round edges */
     display: block;
     grid-row: 1 / 1;
     width: 110px;
@@ -72,24 +72,24 @@ a{
     margin: 20px auto 7px auto;
 }
 
-.aside-item-2 ul li{
+.aside-item-2 ul li{ /*our icons will display inline */
     display: inline;
     padding: 10px;
 }
 
-.aside-item-2-Icons{
+.aside-item-2-Icons{ /* adjusts the size of our icons*/
     width: 30px;
     height: auto;
 }
 
-.aside-item-3 ul li{
+.aside-item-3 ul li{ /* gives our nav bar some transition effects on hover*/
     list-style: none;
     font-size: 25px;
     padding: 25px;
     transition: transform 2s;
 }
 
-.main-grid{
+.main-grid{ /*splits up the second column into 1 main column with 4 rows */
     grid-column: 2;
     display: grid;
     gap: 0px;
@@ -98,45 +98,44 @@ a{
 
 }
 
-.main-item-1{
+.main-item-1{ /* our first item in our grid is in row 1 */
     grid-row: 1;
 }
 
-.main-item-1 img{
+.main-item-1 img{ /* allows sizing of our background image */
     height: 100vh;
     width: 100%;
 }
 
-.main-item-2{
+.main-item-2{/* centers the content in our second row */
     grid-row: 2;
     display: flex;
     justify-content: center;
 }
 
-.main-item-3{
+.main-item-3{/* centers the content and allows it to wrap in our third row*/
     grid-row: 3;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.card{
+.card{/* adds a background color to our cards and padding */
     justify-content: flex-start;
     background-color: #33393f;
     color: #e866ec;
     padding: 2rem;
 }
 
-.card-outline{
+.card-outline{/*outline for our cards as well as how they will wrap with other items in the grid */
     display: flex;
     flex-direction: column;
     outline: 2px dashed #e0eae4;
     outline-offset: -2px;
-    transition: all 0.5s ease-in-out;
     margin: 40px;
 }
 
-.card-outline .card-header{
+.card-outline .card-header{/* adjusts the style of the header*/
     position: relative;
     text-align: center;
     padding: 0.5rem 1rem;
@@ -144,32 +143,30 @@ a{
     color: #e866ec;
     border: 2px solid #e0eae4;
     border-radius: 8px;
-    transition: all 0.5s ease-in-out;
 }
 
-.card pre{
+.card pre{/* allows the pre text to scale up*/
     flex-grow: 1;
 }
 
-#portfolio-header{
+#portfolio-header{/* adjusts the text for the portfolio header*/
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 100px;
     color: #e866ec;
 }
 
-#home{
+#home{/*changes font and allows us to link to the home part of our site */
+    font-family: var(--font);
+}
+#about-me{/* changes font and allows us to link to the about me part of our site*/
     font-family: var(--font);
 }
 
-#about-me{
+#contact-form{/* changes font and allows us to link to the contact part of our site */
     font-family: var(--font);
 }
 
-#contact-form{
-    font-family: var(--font);
-}
-
-.main-item-4{
+.main-item-4{/* our last row and our footer. allows it to wrap around other content*/
     grid-row: 4;
     display: flex;
     flex-wrap: wrap;
@@ -177,7 +174,7 @@ a{
     justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {/* adjusts rule sets to scale down when the screen gets smaller*/
     .start-grid{
         display: flex;
         flex-direction: column;

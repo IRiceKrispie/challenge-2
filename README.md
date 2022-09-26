@@ -8,4 +8,5 @@ Second bootcamp challenge
 * CSS is commented to allow others to know what rulesets are doing
 
 ## Links
-* Github: 
+* Github: https://github.com/IRiceKrispie/challenge-2
+* Pages: https://iricekrispie.github.io/challenge-2/

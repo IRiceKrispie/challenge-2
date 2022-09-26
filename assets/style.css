@@ -133,6 +133,7 @@ a{
     outline: 2px dashed #e0eae4;
     outline-offset: -2px;
     transition: all 0.5s ease-in-out;
+    margin: 40px;
 }
 
 .card-outline .card-header{
@@ -202,6 +203,10 @@ a{
     .main-item-1 img{
         height: auto;
         object-fit: fill;
+    }
+
+    .card-outline{
+        margin: 0px;
     }
 
 }

@@ -149,6 +149,10 @@ a{
     flex-grow: 1;
 }
 
+.card a{
+    flex-grow: 1;
+}
+
 #portfolio-header{/* adjusts the text for the portfolio header*/
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 100px;
